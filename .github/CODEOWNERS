@@ -1,0 +1,11 @@
+# Default code owner
+* @sodlfxhzms923
+
+# HTML files
+*.html @sodlfxhzms923
+
+# CSS files
+*.css @sodlfxhzms923
+
+# Documentation
+*.md @sodlfxhzms923
