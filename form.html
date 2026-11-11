@@ -2,20 +2,26 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
     <title>사용자 정보 입력</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>사용자 정보 입력</h1>
-    <p>사용자 정보를 입력해 주세요.</p>
 
-    <form action="#" method="get">
+    <p>
+        이 페이지는 실습용 데모입니다.
+        실제 개인정보를 입력하지 마세요.
+    </p>
+
+    <form id="demo-form" method="post" action="#">
         <p>
             <label for="username">이름</label>
             <input type="text"
                    id="username"
                    name="username"
+                   placeholder="홍길동"
                    required>
         </p>
 
@@ -24,14 +30,29 @@
             <input type="email"
                    id="email"
                    name="email"
+                   placeholder="example@email.com"
                    required>
         </p>
 
-        <button type="submit">제출하기</button>
+        <button type="submit">입력 확인</button>
     </form>
+
+    <p id="result" role="status"></p>
 
     <p>
         <a href="index.html">홈으로 돌아가기</a>
     </p>
+
+    <script>
+        const form = document.getElementById("demo-form");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            document.getElementById("result").textContent =
+                "입력 형식이 확인되었습니다. " +
+                "정보는 전송되거나 저장되지 않습니다.";
+        });
+    </script>
 </body>
 </html>
