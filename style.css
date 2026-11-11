@@ -28,3 +28,18 @@ a {
 a:hover {
     background-color: #203b92;
 }
+
+/* Mobile responsive layout */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
